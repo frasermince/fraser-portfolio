@@ -4,6 +4,8 @@ import TalkIllustration from "components/illustrations/TalkIllustration";
 import ContactForm from "./ContactForm";
 import { Wrapper, Details, Thumbnail } from "./styles";
 import image from "assets/ancient_ai.png";
+import { StaticImage } from "gatsby-plugin-image"
+
 
 export default () => (
   <Wrapper as={Container} id="contact">
@@ -11,7 +13,7 @@ export default () => (
       <ContactForm />
     </Details>
     <Thumbnail>
-      <img src={image} />
+      <StaticImage src="../../../assets/ancient_ai.png" alt="Ancient High Tech City" />
     </Thumbnail>
 
   </Wrapper>

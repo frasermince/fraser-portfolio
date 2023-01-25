@@ -5,7 +5,7 @@ import Container from "components/common/Container";
 import Button from "components/common/Button";
 import SkillIllustration from "components/illustrations/SkillIllustration";
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from "./styles";
-import image from "assets/abstract_ai_door.png";
+import { StaticImage } from "gatsby-plugin-image"
 
 export default () => {
   const {
@@ -27,7 +27,7 @@ export default () => {
     <Wrapper id="about">
       <SkillsWrapper as={Container}>
         <Thumbnail>
-          <img src={image} />
+          <StaticImage src="../../../assets/abstract_ai_door.png" alt="Man Entering High Tech Door" />
         </Thumbnail>
         <Details>
           <h1>{title}</h1>

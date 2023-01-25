@@ -4,10 +4,9 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Header from "components/theme/Header";
 import Container from "components/common/Container";
 import Button from "components/common/Button";
-import DevIllustration from "components/illustrations/DevIllustration";
 import { Wrapper, IntroWrapper, Details, Thumbnail } from "./styles";
+import { StaticImage } from "gatsby-plugin-image"
 
-import image from "assets/round_abstract_final.png";
 
 export default () => {
   const {
@@ -37,7 +36,7 @@ export default () => {
           </Button>
         </Details>
         <Thumbnail>
-          <img src={image} />
+          <StaticImage src="../../../assets/round_abstract_final.png" alt="Circular Abstract AI Illustration" />
         </Thumbnail>
       </IntroWrapper>
     </Wrapper>
