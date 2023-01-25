@@ -4,7 +4,11 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-console.log("process.env.GITHUB_TOKEN", process.env.GITHUB_TOKEN);
+console.log(
+  "process.env.GITHUB_TOKEN",
+  process.env.GITHUB_TOKEN,
+  process.env.NODE_ENV
+);
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -17,7 +21,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-emotion",
-    "gatsby-plugin-google-gtag",
+    // "gatsby-plugin-google-gtag",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
