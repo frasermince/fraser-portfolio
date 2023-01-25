@@ -23,6 +23,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-emotion",
     // "gatsby-plugin-google-gtag",
     "gatsby-plugin-image",
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
