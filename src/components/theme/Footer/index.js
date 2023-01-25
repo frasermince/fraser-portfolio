@@ -18,26 +18,7 @@ export default () =>
           "span",
           null,
           "\u00A9 All rights are reserved | ",
-          new Date().getFullYear(),
-          " | Made with",
-          " ",
-          React.createElement(
-            "span",
-            { "aria-label": "love", role: "img" },
-            "\uD83D\uDC96"
-          ),
-          " ",
-          "by",
-          " ",
-          React.createElement(
-            "a",
-            {
-              href: "https://smakosh.com/?ref=gatsby-theme-portfolio",
-              rel: "noopener noreferrer",
-              target: "_blank",
-            },
-            "Smakosh"
-          )
+          new Date().getFullYear()
         )
       ),
       React.createElement(Social, null)
