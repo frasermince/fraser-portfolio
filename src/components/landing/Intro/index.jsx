@@ -37,7 +37,6 @@ export default () => {
         </Details>
         <Thumbnail>
           <StaticImage height="550" src="../../../assets/round_abstract_final.png" alt="Circular Abstract AI Illustration" />
-          {/* <StaticImage  src="../../../assets/round_abstract_final.png" alt="Circular Abstract AI Illustration" /> */}
         </Thumbnail>
       </IntroWrapper>
     </Wrapper>

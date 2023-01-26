@@ -53,21 +53,6 @@ const config: GatsbyConfig = {
       __key: "pages",
     },
     {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: "GitHub",
-        fieldName: "github",
-        url: "https://api.github.com/graphql",
-        headers: {
-          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-        },
-        fetchOptions: {},
-        variables: {
-          username: "frasermince",
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
