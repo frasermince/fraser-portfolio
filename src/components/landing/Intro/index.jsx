@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Header from "components/theme/Header";
-import Container from "components/common/Container";
+import {StartingContainer} from "components/common/Container";
 import Button from "components/common/Button";
 import { Wrapper, IntroWrapper, Details, Thumbnail } from "./styles";
 import { StaticImage } from "gatsby-plugin-image"
@@ -27,7 +27,7 @@ export default () => {
   return (
     <Wrapper>
       <Header />
-      <IntroWrapper as={Container}>
+      <IntroWrapper as={StartingContainer}>
         <Details>
           <h1>{title}</h1>
           <h4>{description}</h4>
@@ -36,7 +36,8 @@ export default () => {
           </Button>
         </Details>
         <Thumbnail>
-          <StaticImage src="../../../assets/round_abstract_final.png" alt="Circular Abstract AI Illustration" />
+          <StaticImage height="550" src="../../../assets/round_abstract_final.png" alt="Circular Abstract AI Illustration" />
+          {/* <StaticImage  src="../../../assets/round_abstract_final.png" alt="Circular Abstract AI Illustration" /> */}
         </Thumbnail>
       </IntroWrapper>
     </Wrapper>
