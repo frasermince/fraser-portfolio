@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
   background-size: contain;
   background-position: right top;
   background-repeat: no-repeat;
+  @media (max-width: 960px) {
+    margin: auto;
+  }
 `;
 
 export const IntroWrapper = styled.div`
@@ -18,6 +21,10 @@ export const IntroWrapper = styled.div`
 
   @media (max-width: 960px) {
     flex-direction: column-reverse;
+    margin: 0;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
   }
 `;
 
@@ -27,6 +34,7 @@ export const Details = styled.div`
   @media (max-width: 960px) {
     width: 100%;
     margin-bottom: 2rem;
+    justify-content: center;
   }
 
   h1 {
@@ -55,6 +63,7 @@ export const Thumbnail = styled.div`
   flex: 3;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (max-width: 960px) {
     width: 100%;
@@ -62,5 +71,8 @@ export const Thumbnail = styled.div`
 
   img {
     width: 100%;
+    @media (max-width: 960px) {
+      width: 90%;
+    }
   }
 `;

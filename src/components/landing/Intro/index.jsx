@@ -36,7 +36,7 @@ export default () => {
           </Button>
         </Details>
         <Thumbnail>
-          <StaticImage height="550" src="../../../assets/round_abstract_final.png" alt="Circular Abstract AI Illustration" />
+          <StaticImage height="550" src="../../../assets/round_abstract_final.png" alt="Circular Abstract AI Illustration" style={{justifyContent: "center"}} />
         </Thumbnail>
       </IntroWrapper>
     </Wrapper>

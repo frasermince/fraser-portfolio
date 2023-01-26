@@ -72,7 +72,7 @@ export default () => {
       startTime: "2017",
     },
     "Make a Lisp": {
-      description: "A lisp implementation I built in Haskell",
+      description: "A lisp implementation built in Haskell",
       url: "https://github.com/frasermince/mal-personal",
       learnings: [
         "Improved my Haskell skills",
@@ -88,7 +88,7 @@ export default () => {
     <Wrapper as={Container} id="projects">
       <ProjectHeader>
         <h2>Projects</h2>
-        <p>Explore a curated selection of personal projects that I have undertaken throughout my career, each serving as an opportunity for growth and skill development. From startup ideas to unfinished endeavors, these projects reflect my dedication to continuous learning and self-improvement.</p>
+        <p>Explore a curated selection of personal projects that I have undertaken throughout my career, each serving as an opportunity for growth and skill development. From startup ideas event to my unfinished endeavors, these projects reflect my dedication to continuous learning and self-improvement.</p>
       </ProjectHeader>
       <Flex>
         {Object.entries(projectInfo).map(
