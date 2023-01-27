@@ -12,14 +12,14 @@ import { StaticImage } from "gatsby-plugin-image"
 export default () => {
   const projectInfo = {
     "Muzero Implementation": {
-      description: "My most recent work where I implemented Muzero in jax and ray distributed trained on atari games. I spent a considerable amount of time understanding the paper and implementing the algorithm.",
-      url: "https://github.com/frasermince/muzero",
-      learnings: [
-        "Learned how to use Jax to have an easy way to build neural nets in a way that is easy to use and device portable",
-        "Learned how to use Ray",
-        "Learned how to orchestrate distributed training",
-        "Became proficient in the theory behind the AlphaZero family of algorithms"
+      description: "A recent project where I successfully implemented the Muzero algorithm using Jax and Ray for distributed training on Atari games. The project required a deep understanding of the underlying theory and the development of skills in neural network building, distributed training orchestration, and the use of Jax and Ray.",
+      learnings: [ 
+        "Acquired proficiency in using Jax for building neural networks that are easy to use and device portable",
+        "Developed expertise in using Ray for distributed training",
+        "Learned how to orchestrate distributed training effectively",
+        "Gained a thorough understanding of the AlphaZero family of algorithms and its underlying theory." 
       ],
+      url: "https://github.com/frasermince/muzero",
       imageComponent: <StaticImage height="200" src="../../../assets/muzero2_illustration.png" alt="Illustration of a stylized game of pong combined with go" />,
       startTime: "2022",
     },
