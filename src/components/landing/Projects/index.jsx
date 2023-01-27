@@ -1,10 +1,8 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { Flex, Item } from "react-flex-ready";
 import Container from "components/common/Container";
 import Card from "components/common/Card";
-import starIcon from "assets/icons/star.svg";
-import forkIcon from "assets/icons/fork.svg";
 import { Wrapper, Content, ProjectContent, Thumbnail, ProjectHeader } from "./styles";
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -24,61 +22,61 @@ export default () => {
       startTime: "2022",
     },
     "Reinforcement Learning Paper Implementations": {
-      description: "A collection of RL algorithms I implemented in pytorch. This was the first step on my path to become proficient reading and implementing RL algorithms.",
-      url: "https://github.com/frasermince/rl-papers",
-      learnings: [
-        "Became more comfortable with Pytorch",
-        "Gained experience understanding the basics of RL papers and the math behind them ",
-        "Learned the basics of value networks, policy networks, and actor critic networks",
-        "Implemented DQN, DDQN, A2C, and started a Muzero implementation"
+      "description": "A compilation of RL algorithms implemented in Pytorch, representing an initial step in my journey towards proficiency in reading and implementing RL algorithms.",
+      "learnings": [
+        "Gained familiarity and comfort with Pytorch",
+        "Developed the ability to understand the fundamentals of RL papers and the mathematical concepts behind them",
+        "Acquired a foundational understanding of value networks, policy networks, and actor-critic networks",
+        "Implemented DQN, DDQN, A2C, and initiated an implementation of Muzero"
       ],
+      url: "https://github.com/frasermince/rl-papers",
       imageComponent: <StaticImage height="200" src="../../../assets/rl_papers2_illustration.png" alt="Illustration of a man inventing AI to be used in games" />,
       startTime: "2021",
     },
     "Unchart": {
-      description: "A startup idea I implemented to easily read a book in another language. Includes an Elixir GraphQL backend and a Purescript React Native frontend.",
-      url: "https://unchart.io",
-      learnings: [
-        "Refined my skills in Purescript as I was in a bit of a functional programming phase",
-        "Learned how to use GraphQL and Apollo",
-        "Spend a considerable amount of time cold emailing and messaging potential users to get feedback on the product",
-        "Learned how to use React Native",
-        "Learned to use spaCy for NLP tasks involving processing epub files",
+  "description": "A startup idea I implemented to facilitate reading books in other languages, featuring an Elixir GraphQL backend and Purescript React Native frontend.",
+    "learnings": [
+        "Enhanced my expertise in Purescript during a period of focus on functional programming",
+        "Acquired proficiency in GraphQL and Apollo",
+        "Gained experience in reaching out to potential users through cold emailing and messaging to gather feedback on the product",
+        "Became proficient in React Native",
+        "Learned how to use spaCy for NLP tasks related to processing epub files",
       ],
+      url: "https://unchart.io",
       imageComponent: <StaticImage height="200" src="../../../assets/unchart_illustration.png" alt="Illustration of a book that is combined with a computer" />,
       startTime: "2020",
     },
     "Fast.ai course and beginning interest in machine learning": {
-      description: "During this period I began learning about AI and deep learning. I took the fast.ai course and participated in a few kaggle competitions. I also began to learn about the theory behind deep learning and AI.",
-      url: "",
+      "description": "A period of learning and exploration in the field of AI and deep learning, including participation in the fast.ai course and Kaggle competitions, as well as delving into the underlying theory of deep learning and AI.",
       learnings: [
-        "Learned how to use Pytorch",
-        "Learned how to use fast.ai",
-        "Learned the basics of neural nets and created a blog post distilling my understanding https://thoughtbot.com/blog/neural-nets",
-        "Learned about convolutional neural nets and attention mechanisms",
-        "Began going through Spinning Up In Deep RL found here https://spinningup.openai.com/",
+        "Acquired proficiency in using Pytorch",
+        "Developed expertise in using fast.ai",
+        "Gained a foundational understanding of neural networks, and distilled my learning in a blog post: https://thoughtbot.com/blog/neural-nets",
+        "Became familiar with convolutional neural networks and attention mechanisms",
+        "Began studying the \"Spinning Up In Deep RL\" guide: https://spinningup.openai.com/",
       ],
+      url: "",
       imageComponent: <StaticImage height="200" src="../../../assets/neural_net_illustration.png" alt="Illustration of a stylized neural net" />,
       startTime: "2018",
     },
     "Interactive Code Portfolio": {
-      description: "Another project built in purescript. This one with the goal of being an interactive code first portfolio.",
-      url: "https://github.com/frasermince/code-saga",
-      learnings: [
-        "Learned how to use Purescript",
-        "Learned how to create a useful product to fit my needs"
+      "description": "A project developed with Purescript that aimed to create an interactive code-first portfolio.",
+      "learnings": [
+        "Developed proficiency in Purescript",
+        "Gained experience in creating a product to meets my specific needs"
       ],
+      url: "https://github.com/frasermince/code-saga",
       imageComponent: <StaticImage height="200" src="../../../assets/code_portfolio_illustration.png" alt="Illustration of a computer higher than trees showing off code" />,
       startTime: "2017",
     },
     "Make a Lisp": {
-      description: "A lisp implementation built in Haskell",
-      url: "https://github.com/frasermince/mal-personal",
-      learnings: [
-        "Improved my Haskell skills",
-        "Learned how to use the parsec library",
-        "Learned more about the homoiconic nature of Lisp",
+      "description": "A project to implement a Lisp dialect using Haskell",
+      "learnings": [
+        "Advance my skills in Haskell",
+        "Became familiar with the Parsec library",
+        "Gained deeper understanding of the homoiconic nature of Lisp"
       ],
+      url: "https://github.com/frasermince/mal-personal",
       imageComponent: <StaticImage height="200" src="../../../assets/make_a_lisp_illustration.png" alt="Illustration of a computer higher than trees showing off code" />,
       startTime: "2016",
     }
