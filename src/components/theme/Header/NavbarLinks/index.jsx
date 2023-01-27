@@ -6,6 +6,7 @@ export default ({ desktop }) => (
 	<Wrapper desktop={desktop}>
 		<AnchorLink href="#about">About</AnchorLink>
 		<AnchorLink href="#projects">Projects</AnchorLink>
+		<AnchorLink href="#interests">Interests</AnchorLink>
 		<AnchorLink href="#contact">Contact</AnchorLink>
 	</Wrapper>
 )

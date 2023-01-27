@@ -1,7 +1,7 @@
 import SEO from "components/common/SEO";
 import Intro from "components/landing/Intro";
 import Projects from "components/landing/Projects";
-import Skills from "components/landing/Skills";
+import Interests from "components/landing/Interests";
 import Contact from "components/landing/Contact";
 import Footer from "components/theme/Footer";
 import Layout from "components/common/Layout";
@@ -16,7 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <SEO />
       <Intro />
       <Projects />
-      <Skills />
+      <Interests />
       <Contact />
       <Footer />
     </Layout>

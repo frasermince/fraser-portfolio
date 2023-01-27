@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   background-repeat: no-repeat;
 `;
 
+export const ListWrapper = styled.div`
+  padding: 4rem 0;
+`;
+
 export const SkillsWrapper = styled.div`
   padding: 4rem 0;
   display: flex;
@@ -54,5 +58,24 @@ export const Thumbnail = styled.div`
 
   img {
     width: 100%;
+  }
+`;
+
+export const Content = styled.div`
+  flex: 3;
+  padding: 1rem 0;
+  padding-left: 2rem;
+`;
+
+export const ProjectContent = styled.div`
+  align-items: center;
+  display: flex;
+  ${({ reversed }) =>
+    reversed &&
+    `
+    flex-direction: row-reverse;
+  `}
+  @media (max-width: 960px) {
+    flex-direction: column;
   }
 `;
