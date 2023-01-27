@@ -59,7 +59,7 @@ export default () => {
         "Began going through Spinning Up In Deep RL found here https://spinningup.openai.com/",
       ],
       imageComponent: <StaticImage height="200" src="../../../assets/neural_net_illustration.png" alt="Illustration of a stylized neural net" />,
-      startTime: "2018-2019",
+      startTime: "2018",
     },
     "Interactive Code Portfolio": {
       description: "Another project built in purescript. This one with the goal of being an interactive code first portfolio.",
@@ -107,7 +107,7 @@ export default () => {
 
                   <Content>
                     <div> 
-                      <h4>{name}</h4>
+                      <h4>{name} - {value.startTime}</h4>
                       <p>{value?.description}</p>
                       <ul>
                         {value?.learnings.map((learning) => {
