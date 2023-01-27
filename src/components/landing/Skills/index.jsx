@@ -14,7 +14,7 @@ export default () => {
     }
   } = useStaticQuery(graphql`
     query {
-      content: markdownRemark(frontmatter: { section: { eq: "about" } }) {
+      content: markdownRemark(frontmatter: { section: { eq: "current_interests" } }) {
         frontmatter {
           title
           description
@@ -32,9 +32,6 @@ export default () => {
         <Details>
           <h1>{title}</h1>
           <p>{description}</p>
-          <Button as={AnchorLink} href="#contact">
-            {action}
-          </Button>
         </Details>
       </SkillsWrapper>
     </Wrapper>

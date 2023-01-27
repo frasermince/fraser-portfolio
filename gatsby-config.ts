@@ -1,15 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
 
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
-
-console.log(
-  "process.env.GITHUB_TOKEN",
-  process.env.GITHUB_TOKEN,
-  process.env.NODE_ENV
-);
-
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `fraser-portfolio`,
@@ -57,6 +47,22 @@ const config: GatsbyConfig = {
       options: {
         name: `content`,
         path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
+        web: [
+          {
+            name: `Roboto`,
+            file: `https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap`,
+          },
+        ],
       },
     },
   ],
