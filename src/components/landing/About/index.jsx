@@ -9,17 +9,17 @@ export default () => {
         <Header>
           <h2>About</h2>
           <p>
-            Senior Fullstack Engineer and aspiring ML Researcher. I am
-            continuously starting new projects, challenging myself, and learning
-            more about the world around me. For the past couple of years I have
-            been learning everything I can about deep reinforcement learning and
-            natural language processing. Currently working on research projects
-            and exploring new job opportunities.
+            As a Senior Fullstack Engineer and ambitious Machine Learning
+            Researcher, I am passionate about personal growth and expanding my
+            knowledge. In recent years, I have focused on mastering the field of
+            Deep Reinforcement Learning and Natural Language Processing. My
+            current endeavors include engaging in cutting-edge research projects
+            and actively seeking out new career opportunities.
           </p>
           <p>
-            Outside of work I am very passionate about politics, economics, and
-            urbanism. I love to run and am extremely social. I am always reading
-            both fiction and non-fiction books.
+            In my free time, I am deeply interested in the fields of politics,
+            economics, and urbanism. I enjoy running and staying active. Reading
+            fiction and non-fiction literature is one of my favorite pastimes.
           </p>
         </Header>
       </Wrapper>
