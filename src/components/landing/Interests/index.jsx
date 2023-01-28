@@ -57,6 +57,10 @@ const interests = {
           title: "Currently Reading",
           items: [
             [
+              "Muesli: Combining Improvements in Policy Optimization",
+              "https://arxiv.org/abs/2104.06159",
+            ],
+            [
               "Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review",
               "https://arxiv.org/abs/1805.00909",
             ],
@@ -99,12 +103,84 @@ const interests = {
       },
     },
   },
+  "Highlights From What I'm Reading/Read This Year": {
+    interests: {
+      "Slouching Towards Utopia": {
+        description: "An economic history of the 20th century",
+        author: "J. Bradford DeLong",
+        imageComponent: (
+          <StaticImage
+            height="200"
+            src="../../../assets/slouching_towards_utopia_illustration3.png"
+            alt="Industrialization Leading Slowly to Utopia"
+          />
+        ),
+      },
+      "Of Boys and Men": {
+        description:
+          "Why The Modern Male Is Struggling, Why It Matters, And What To Do About It",
+        author: "Richard V. Reeves",
+        imageComponent: (
+          <StaticImage
+            height="200"
+            src="../../../assets/of_boys_and_men_illustration.png"
+            alt="Of Boys and Men Illustration"
+          />
+        ),
+      },
+      "Land is a Big Deal": {
+        description:
+          "Why rent is too high, wages too low, and what we can do about it",
+        author: "Lars A. Doucet",
+        imageComponent: (
+          <StaticImage
+            height="200"
+            src="../../../assets/land_is_a_big_deal_illustration.png"
+            alt="Illustration of Land Utopia"
+          />
+        ),
+      },
+      Multipliers: {
+        description: "How the best leaders make everyone smarter",
+        author: "Liz Wiseman",
+        imageComponent: (
+          <StaticImage
+            height="200"
+            src="../../../assets/multipliers_illustration.png"
+            alt="Multipliers Illustration"
+          />
+        ),
+      },
+      Snow: {
+        description: "",
+        author: "John Banville",
+        imageComponent: (
+          <StaticImage
+            height="200"
+            src="../../../assets/snow_illustration.png"
+            alt="Snow Illustration"
+          />
+        ),
+      },
+      "Winter's Heart": {
+        description: "Book 9 of the Wheel of Time",
+        author: "Robert Jordan",
+        imageComponent: (
+          <StaticImage
+            height="200"
+            src="../../../assets/rlhf_illustration.png"
+            alt="Man teaching a machine to think"
+          />
+        ),
+      },
+    },
+  },
 };
 
 export default () => {
   const {
     content: {
-      frontmatter: { title, description, action },
+      frontmatter: { title, description, description_two, action },
     },
   } = useStaticQuery(graphql`
     query {
@@ -114,6 +190,7 @@ export default () => {
         frontmatter {
           title
           description
+          description_two
           action
         }
       }
@@ -132,6 +209,7 @@ export default () => {
           <Details>
             <h1>{title}</h1>
             <p>{description}</p>
+            <p>{description_two}</p>
           </Details>
         </SkillsWrapper>
       </Wrapper>
@@ -139,7 +217,7 @@ export default () => {
         <Flex>
           {Object.entries(interests).map(([interestName, interestInfo], i) => {
             return (
-              <div>
+              <div style={{ width: "100%", marginTop: "2rem" }}>
                 <h3>{interestName}</h3>
                 {Object.entries(interestInfo.interests).map(
                   ([name, value], index) => (
@@ -157,19 +235,28 @@ export default () => {
 
                           <Content>
                             <div>
-                              <h4>{name}</h4>
+                              <h4>
+                                {name +
+                                  (value.author ? " - " + value.author : "")}
+                              </h4>
                               <p>{value?.description}</p>
-                              <h4>{value?.steps.title}</h4>
-                              <ul>
-                                {value?.steps.items.map((step) => {
-                                  return (
-                                    <li>
-                                      {step[0]}
-                                      {step.length > 1 ? " - " + step[1] : ""}
-                                    </li>
-                                  );
-                                })}
-                              </ul>
+                              {value.steps ? (
+                                <>
+                                  <h4>{value?.steps.title}</h4>
+                                  <ul>
+                                    {value?.steps.items.map((step) => {
+                                      return (
+                                        <li>
+                                          {step[0]}
+                                          {step.length > 1
+                                            ? " - " + step[1]
+                                            : ""}
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                </>
+                              ) : null}
                             </div>
                           </Content>
                         </ProjectContent>

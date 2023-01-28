@@ -3,6 +3,8 @@ import Intro from "components/landing/Intro";
 import Projects from "components/landing/Projects";
 import Interests from "components/landing/Interests";
 import Contact from "components/landing/Contact";
+import About from "components/landing/About";
+import Experience from "components/landing/Experience";
 import Footer from "components/theme/Footer";
 import Layout from "components/common/Layout";
 
@@ -15,7 +17,8 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout>
       <SEO />
       <Intro />
-      {/* <Experience /> */}
+      <About />
+      <Experience />
       <Projects />
       <Interests />
       <Contact />

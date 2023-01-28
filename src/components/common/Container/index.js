@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const OuterContainer = styled.div`
+  width: 100%;
+  border-top: 1px solid #ebeaeb;
+  margin-top: 5rem;
+`;
+
 const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;

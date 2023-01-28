@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Flex, Item } from "react-flex-ready";
-import Container from "components/common/Container";
+import Container, { OuterContainer } from "components/common/Container";
 import Card from "components/common/Card";
 import {
   Wrapper,
@@ -129,58 +129,60 @@ export default () => {
   };
 
   return (
-    <Wrapper as={Container} id="projects">
-      <Flex style={{ marginBottom: "4rem" }}>
-        <ProjectHeader>
-          <h2>Projects</h2>
-          <p>
-            Explore a curated selection of personal projects that I have
-            undertaken throughout my career, each serving as an opportunity for
-            growth and skill development. From startup ideas event to my
-            unfinished endeavors, these projects reflect my dedication to
-            continuous learning and self-improvement.
-          </p>
-        </ProjectHeader>
-        <Thumbnail>
-          <StaticImage
-            height="500"
-            src="../../../assets/project_header_illustration.png"
-            alt="Illustration of a stylized game of pong combined with go"
-          />
-        </Thumbnail>
-      </Flex>
-      <Flex>
-        {Object.entries(projectInfo).map(([name, value], index) => (
-          <Item key={index} marginBottom={30} gap={1} stretch>
-            <Card
-              as="a"
-              href={value.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              paddingLeft={10}
-              paddingRight={10}
-            >
-              <ProjectContent reversed={index % 2 == 0}>
-                <Thumbnail>{value.imageComponent}</Thumbnail>
+    <OuterContainer id="projects">
+      <Wrapper as={Container}>
+        <Flex style={{ marginBottom: "4rem" }}>
+          <ProjectHeader>
+            <h2>Projects</h2>
+            <p>
+              Explore a curated selection of personal projects that I have
+              undertaken throughout my career, each serving as an opportunity
+              for growth and skill development. From startup ideas event to my
+              unfinished endeavors, these projects reflect my dedication to
+              continuous learning and self-improvement.
+            </p>
+          </ProjectHeader>
+          <Thumbnail>
+            <StaticImage
+              height="500"
+              src="../../../assets/project_header_illustration.png"
+              alt="Illustration of a stylized game of pong combined with go"
+            />
+          </Thumbnail>
+        </Flex>
+        <Flex>
+          {Object.entries(projectInfo).map(([name, value], index) => (
+            <Item key={index} marginBottom={30} gap={1} stretch>
+              <Card
+                as="a"
+                href={value.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                paddingLeft={10}
+                paddingRight={10}
+              >
+                <ProjectContent reversed={index % 2 == 0}>
+                  <Thumbnail>{value.imageComponent}</Thumbnail>
 
-                <Content>
-                  <div>
-                    <h4>
-                      {name} - {value.startTime}
-                    </h4>
-                    <p>{value?.description}</p>
-                    <ul>
-                      {value?.learnings.map((learning) => {
-                        return <li>{learning}</li>;
-                      })}
-                    </ul>
-                  </div>
-                </Content>
-              </ProjectContent>
-            </Card>
-          </Item>
-        ))}
-      </Flex>
-    </Wrapper>
+                  <Content>
+                    <div>
+                      <h4>
+                        {name} - {value.startTime}
+                      </h4>
+                      <p>{value?.description}</p>
+                      <ul>
+                        {value?.learnings.map((learning) => {
+                          return <li>{learning}</li>;
+                        })}
+                      </ul>
+                    </div>
+                  </Content>
+                </ProjectContent>
+              </Card>
+            </Item>
+          ))}
+        </Flex>
+      </Wrapper>
+    </OuterContainer>
   );
 };
