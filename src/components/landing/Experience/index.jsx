@@ -4,7 +4,7 @@ import { Wrapper, Header } from "./styles";
 
 export default () => {
   return (
-    <Wrapper as={Container} id="about">
+    <Wrapper as={Container} id="experience">
       <Header>
         <h2>Experience</h2>
         <ul>

@@ -18,6 +18,17 @@ import { Flex, Item } from "react-flex-ready";
 const interests = {
   "Machine Learning": {
     interests: {
+      "For AI Community Research Project": {
+        description:
+          "A research project I am working on as part of the cohere.for.ai community advised by Sara Hooker of For AI and Neil Thompson of MIT. More details to come.",
+        imageComponent: (
+          <StaticImage
+            height="200"
+            src="../../../assets/research_project_illustration.png"
+            alt="Man teaching a machine to think"
+          />
+        ),
+      },
       RLHF: {
         description:
           "As reinforcement learning has found more production use cases through RLHF, I have begun to explore the state of the art.",
@@ -152,7 +163,7 @@ const interests = {
         ),
       },
       Snow: {
-        description: "",
+        description: "A Novel",
         author: "John Banville",
         imageComponent: (
           <StaticImage
