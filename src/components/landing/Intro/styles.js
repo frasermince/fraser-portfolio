@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
   background-repeat: no-repeat;
   @media (max-width: 960px) {
     margin: auto;
+    padding-bottom: 0;
   }
 `;
 
@@ -24,6 +25,7 @@ export const IntroWrapper = styled.div`
     margin: 0;
     width: 90%;
     margin-left: 5%;
+    padding-bottom: 0;
   }
 `;
 
@@ -80,6 +82,10 @@ export const Thumbnail = styled.div`
     margin-bottom: 4rem;
     justify-content: left;
     align-items: left;
+  }
+
+  @media (max-width: 680px) {
+    display: none;
   }
 
   // .gatsby-image-wrapper {
