@@ -7,14 +7,17 @@ export default () => {
     <OuterContainer id="about">
       <Wrapper as={Container}>
         <Header>
-          <h2>About</h2>
+          <h1>About</h1>
           <p>
             As a Senior Fullstack Engineer and ambitious Machine Learning
             Researcher, I am passionate about personal growth and expanding my
-            knowledge. In recent years, I have focused on mastering the field of
-            Deep Reinforcement Learning and Natural Language Processing. My
-            current endeavors include engaging in cutting-edge research projects
-            and actively seeking out new career opportunities.
+            knowledge.
+          </p>
+          <p>
+            In recent years, I have focused on mastering the field of Deep
+            Reinforcement Learning and Natural Language Processing. My current
+            endeavors include engaging in cutting-edge research projects and
+            actively seeking out new career opportunities.
           </p>
           <p>
             In my free time, I am deeply interested in the fields of politics,

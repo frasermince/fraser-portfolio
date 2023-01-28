@@ -9,6 +9,7 @@ import {
   ProjectContent,
   Thumbnail,
   ProjectHeader,
+  HeaderFlex,
 } from "./styles";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -131,15 +132,18 @@ export default () => {
   return (
     <OuterContainer id="projects">
       <Wrapper as={Container}>
-        <Flex style={{ marginBottom: "4rem" }}>
+        <HeaderFlex>
           <ProjectHeader>
-            <h2>Projects</h2>
+            <h1>Projects</h1>
             <p>
               Explore a curated selection of personal projects that I have
               undertaken throughout my career, each serving as an opportunity
-              for growth and skill development. From startup ideas event to my
-              unfinished endeavors, these projects reflect my dedication to
-              continuous learning and self-improvement.
+              for growth and skill development.{" "}
+            </p>
+            <p>
+              From startup ideas event to my unfinished endeavors, these
+              projects reflect my dedication to continuous learning and
+              self-improvement.
             </p>
           </ProjectHeader>
           <Thumbnail>
@@ -149,7 +153,7 @@ export default () => {
               alt="Illustration of a stylized game of pong combined with go"
             />
           </Thumbnail>
-        </Flex>
+        </HeaderFlex>
         <Flex>
           {Object.entries(projectInfo).map(([name, value], index) => (
             <Item key={index} marginBottom={30} gap={1} stretch>
