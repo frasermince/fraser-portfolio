@@ -168,7 +168,7 @@ const interests = {
         imageComponent: (
           <StaticImage
             height="200"
-            src="../../../assets/rlhf_illustration.png"
+            src="../../../assets/wheel_of_time_illustration.png"
             alt="Man teaching a machine to think"
           />
         ),
