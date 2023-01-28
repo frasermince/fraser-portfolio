@@ -59,8 +59,8 @@ const config: GatsbyConfig = {
         ],
         web: [
           {
-            name: `Roboto`,
-            file: `https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap`,
+            name: `Montserrat`,
+            file: `https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap`,
           },
         ],
       },
