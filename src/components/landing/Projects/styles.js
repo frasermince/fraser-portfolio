@@ -21,6 +21,7 @@ export const ProjectItem = styled.div`
 
 export const ProjectHeader = styled.div`
   margin-bottom: 4rem;
+  flex: 1;
 `;
 
 export const ProjectContent = styled.div`

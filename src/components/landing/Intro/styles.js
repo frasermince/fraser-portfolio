@@ -69,10 +69,15 @@ export const Thumbnail = styled.div`
     width: 100%;
   }
 
-  img {
-    width: 100%;
-    @media (max-width: 960px) {
-      width: 90%;
+  .gatsby-image-wrapper {
+    img {
+      width: 80%;
+      @media (max-width: 960px) {
+        width: 90%;
+      }
+    }
+    div {
+      width: 100%;
     }
   }
 `;

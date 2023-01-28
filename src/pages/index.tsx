@@ -15,6 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout>
       <SEO />
       <Intro />
+      {/* <Experience /> */}
       <Projects />
       <Interests />
       <Contact />
