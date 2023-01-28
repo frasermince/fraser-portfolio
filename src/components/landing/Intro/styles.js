@@ -20,16 +20,15 @@ export const IntroWrapper = styled.div`
   justify-content: space-between;
 
   @media (max-width: 960px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin: 0;
-    justify-content: center;
     width: 90%;
     margin-left: 5%;
   }
 `;
 
 export const Details = styled.div`
-  flex: 2;
+  flex: 4;
 
   @media (max-width: 960px) {
     width: 100%;
@@ -48,15 +47,26 @@ export const Details = styled.div`
   }
 
   h4 {
-    margin-bottom: 2.5rem;
-    font-size: 32pt;
+    font-size: 20pt;
     font-weight: normal;
     color: #707070;
+    margin-bottom: 0.5rem;
 
     @media (max-width: 680px) {
-      font-size: 26pt;
+      font-size: 16pt;
     }
   }
+`;
+
+export const ImageWrapper = styled.div`
+  @media (max-width: 680px) {
+    width: 100%;
+  }
+
+  @media (max-width: 960px) {
+    width: 55%;
+  }
+  width: 85%;
 `;
 
 export const Thumbnail = styled.div`
@@ -67,17 +77,17 @@ export const Thumbnail = styled.div`
 
   @media (max-width: 960px) {
     width: 100%;
+    margin-bottom: 4rem;
+    justify-content: left;
+    align-items: left;
   }
 
-  .gatsby-image-wrapper {
-    img {
-      width: 80%;
-      @media (max-width: 960px) {
-        width: 90%;
-      }
-    }
-    div {
-      width: 100%;
-    }
-  }
+  // .gatsby-image-wrapper {
+  //   img {
+  //     width: 80%;
+  //   }
+  //   div {
+  //     width: 100%;
+  //   }
+  // }
 `;

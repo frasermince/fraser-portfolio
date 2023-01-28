@@ -1,6 +1,8 @@
 ---
 section: intro
 title: Fraser Mince
-description: Full stack engineer and aspiring machine learning researcher with an interest in NLP and RL.
+description_two: ML Researcher - RL, and NLP
+description_one: Full Stack Engineer - React, Rails, and Elixir
+
 action: Hire me
 ---
