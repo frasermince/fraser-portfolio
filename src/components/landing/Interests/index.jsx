@@ -14,6 +14,7 @@ import {
 import Card from "components/common/Card";
 import { StaticImage } from "gatsby-plugin-image";
 import { Flex, Item } from "react-flex-ready";
+import { OuterContainer } from "../../common/Container";
 
 const interests = {
   "Machine Learning": {
@@ -208,78 +209,84 @@ export default () => {
     }
   `);
   return (
-    <Flex>
-      <Wrapper id="interests">
-        <SkillsWrapper as={Container}>
-          <Thumbnail>
-            <StaticImage
-              src="../../../assets/abstract_ai_door.png"
-              alt="Man Entering High Tech Door"
-            />
-          </Thumbnail>
-          <Details>
-            <h1>{title}</h1>
-            <p>{description}</p>
-            <p>{description_two}</p>
-          </Details>
-        </SkillsWrapper>
-      </Wrapper>
-      <ListWrapper as={Container}>
-        <Flex>
-          {Object.entries(interests).map(([interestName, interestInfo], i) => {
-            return (
-              <div style={{ width: "100%", marginTop: "2rem" }}>
-                <h3>{interestName}</h3>
-                {Object.entries(interestInfo.interests).map(
-                  ([name, value], index) => (
-                    <Item key={index} marginBottom={30} gap={1} stretch>
-                      <Card
-                        as="a"
-                        href={value.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        paddingLeft={10}
-                        paddingRight={10}
-                      >
-                        <ProjectContent reversed={index % 2 == 0}>
-                          <Thumbnail>{value.imageComponent}</Thumbnail>
+    <OuterContainer id="interests">
+      <Flex>
+        <Wrapper>
+          <SkillsWrapper as={Container}>
+            <Thumbnail>
+              <StaticImage
+                src="../../../assets/abstract_ai_door.png"
+                alt="Man Entering High Tech Door"
+              />
+            </Thumbnail>
+            <Details>
+              <h1>{title}</h1>
+              <p>{description}</p>
+              <p>{description_two}</p>
+            </Details>
+          </SkillsWrapper>
+        </Wrapper>
+        <ListWrapper as={Container}>
+          <Flex>
+            {Object.entries(interests).map(
+              ([interestName, interestInfo], i) => {
+                return (
+                  <div style={{ width: "100%", marginTop: "2rem" }}>
+                    <h3>{interestName}</h3>
+                    {Object.entries(interestInfo.interests).map(
+                      ([name, value], index) => (
+                        <Item key={index} marginBottom={30} gap={1} stretch>
+                          <Card
+                            as="a"
+                            href={value.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            paddingLeft={10}
+                            paddingRight={10}
+                          >
+                            <ProjectContent reversed={index % 2 == 0}>
+                              <Thumbnail>{value.imageComponent}</Thumbnail>
 
-                          <Content>
-                            <div>
-                              <h4>
-                                {name +
-                                  (value.author ? " - " + value.author : "")}
-                              </h4>
-                              <p>{value?.description}</p>
-                              {value.steps ? (
-                                <>
-                                  <h4>{value?.steps.title}</h4>
-                                  <ul>
-                                    {value?.steps.items.map((step) => {
-                                      return (
-                                        <li>
-                                          {step[0]}
-                                          {step.length > 1
-                                            ? " - " + step[1]
-                                            : ""}
-                                        </li>
-                                      );
-                                    })}
-                                  </ul>
-                                </>
-                              ) : null}
-                            </div>
-                          </Content>
-                        </ProjectContent>
-                      </Card>
-                    </Item>
-                  )
-                )}
-              </div>
-            );
-          })}
-        </Flex>
-      </ListWrapper>
-    </Flex>
+                              <Content>
+                                <div>
+                                  <h4>
+                                    {name +
+                                      (value.author
+                                        ? " - " + value.author
+                                        : "")}
+                                  </h4>
+                                  <p>{value?.description}</p>
+                                  {value.steps ? (
+                                    <>
+                                      <h4>{value?.steps.title}</h4>
+                                      <ul>
+                                        {value?.steps.items.map((step) => {
+                                          return (
+                                            <li>
+                                              {step[0]}
+                                              {step.length > 1
+                                                ? " - " + step[1]
+                                                : ""}
+                                            </li>
+                                          );
+                                        })}
+                                      </ul>
+                                    </>
+                                  ) : null}
+                                </div>
+                              </Content>
+                            </ProjectContent>
+                          </Card>
+                        </Item>
+                      )
+                    )}
+                  </div>
+                );
+              }
+            )}
+          </Flex>
+        </ListWrapper>
+      </Flex>
+    </OuterContainer>
   );
 };
