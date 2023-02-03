@@ -9,5 +9,6 @@ export default ({ desktop }) => (
     <AnchorLink href="#projects">Projects</AnchorLink>
     <AnchorLink href="#interests">Interests</AnchorLink>
     <AnchorLink href="#contact">Contact</AnchorLink>
+    <a href="https://blog.frasermince.com">Blog</a>
   </Wrapper>
 );
